@@ -98,7 +98,7 @@ var highLow = testArray.reduce(function(accum, number){
 
 console.log(highLow);
 */
-
+/*
 var testArray2 = [3333, 3333, 444, 444, -2222];
 
 var highLowTwo = testArray2.reduce(function(accum, number){
@@ -120,4 +120,26 @@ var highLowTwo = testArray2.reduce(function(accum, number){
 }, {highest: -Infinity, lowest: Infinity, secondhighest: -Infinity, secondlowest: Infinity});
 
 console.log(highLowTwo);
+*/
 
+//e8
+
+
+var newString = "kdsncsdnkcnekcjkenkencd"
+
+var alphaBeats = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+
+var countCharts = function(string){
+       var newstring = string.split('');
+       return newstring.reduce(function(a, b){
+           if(alphaBeats.indexOf(b) > -1 ) { // -1 is a match
+               count += 1;
+           }
+       }
+}, {a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0, h: 0, i: 0, j: 0, k: 0, l: 0, m: 0, n: 0, o: 0, p: 0, q: 0, r: 0, s: 0, t: 0, u: 0, v: 0, w: 0, x: 0, y: 0, z: 0});
+
+console.log(countCharts);
+
+
+//e9
+//e10
