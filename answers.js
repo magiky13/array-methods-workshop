@@ -69,9 +69,9 @@ var countVowels = testString.split(" ").reduce(function(count, b) {
 
 console.log(countVowels);
 */
-
+/*
 var countVowels = function(string){
-    var newArr = string.split("");
+    var newArr = string.split(" ");
     return newArr.reduce(function(count, currentLetter){
         if(myVowels.indexOf(currentLetter) > -1) {
             count += 1;
@@ -81,3 +81,20 @@ var countVowels = function(string){
 }
 
 console.log(countVowels(testString));
+*/
+//e6
+/*
+var testArray = [3333, 3333, 444, 444, -2222];
+
+var highLow = testArray.reduce(function(accum, number){
+        if(number > accum.highest){
+            accum.highest = number;
+        }
+        if(number < accum.lowest){
+            accum.lowest = number;
+        }
+        return accum;
+}, {highest: -Infinity, lowest: Infinity});
+
+console.log(highLow);
+*/
