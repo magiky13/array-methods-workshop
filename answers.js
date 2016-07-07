@@ -26,7 +26,7 @@ var printPositive = testArray(function(number){
 
 */
 //e3
-
+/*
 var testArray2 = [0, 1, 5, ""];
 
 var filterArray = function(array, func) {return array.filter(func);};
@@ -36,9 +36,22 @@ var truthy = function(x){
         return x;
     }
 };
-
+*/
 //console.log(filterArray(testArray2, truthy));
 
 //e4
+
+var testString = "dsdsdsd sd sd sd sd sf frfrfrgtgtgtgttgbtg";
+
+var longestWord = testString.split(" ").reduce(function(a, b){
+    if(a.length > b.length){
+        return a;
+    }
+    else{
+        return b;
+    }
+});
+
+console.log(longestWord);
 
 
