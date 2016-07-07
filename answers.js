@@ -1,11 +1,11 @@
 //e2
-
+/*
 var testArray = [1, 2, -3, -5];
 
 var getPositives = testArray.filter(function(numbers){
     return numbers > 0
 });
-
+*/
 //console.log(getPositives)
 
 //e1
@@ -41,7 +41,8 @@ var truthy = function(x){
 
 //e4
 
-var testString = "dsdsdsd sd sd sd sd sf frfrfrgtgtgtgttgbtg";
+var testString = "dsdsdsd sd sd sd sd sf frfrfrgtgtgtgttgbtg ldjoi";
+/*
 
 var longestWord = testString.split(" ").reduce(function(a, b){
     if(a.length > b.length){
@@ -51,7 +52,32 @@ var longestWord = testString.split(" ").reduce(function(a, b){
         return b;
     }
 });
+*/
+//console.log(longestWord);
 
-console.log(longestWord);
+//e5
 
+var myVowels = ["a", "e", "i", "o", "u", "y"];
+/*
+var countVowels = testString.split(" ").reduce(function(count, b) {
+        if(myVowels.indexOf(b) > -1) { // -1 is a match
+            console.log(b)
+            count = count + 1;
+        }
+    return count;
+}, 0);
 
+console.log(countVowels);
+*/
+
+var countVowels = function(string){
+    var newArr = string.split("");
+    return newArr.reduce(function(count, currentLetter){
+        if(myVowels.indexOf(currentLetter) > -1) {
+            count += 1;
+        }
+        return count;
+    }, 0)
+}
+
+console.log(countVowels(testString));
