@@ -98,3 +98,26 @@ var highLow = testArray.reduce(function(accum, number){
 
 console.log(highLow);
 */
+
+var testArray2 = [3333, 3333, 444, 444, -2222];
+
+var highLowTwo = testArray2.reduce(function(accum, number){
+        if(number > accum.highest){
+            accum.secondhighest = accum.highest;
+            accum.highest = number;
+        }
+        if(number < accum.highest && number > accum.secondhighest){
+            accum.secondhighest = number;
+        }
+        if(number < accum.lowest){
+            accum.secondlowest = accum.lowest;
+            accum.lowest = number;
+        }
+        if(number < accum.lowest && number > accum.secondlowest){
+            accum.secondlowest = number;
+        }
+        return accum;
+}, {highest: -Infinity, lowest: Infinity, secondhighest: -Infinity, secondlowest: Infinity});
+
+console.log(highLowTwo);
+
